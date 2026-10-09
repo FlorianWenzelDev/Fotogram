@@ -14,3 +14,22 @@
   font-weight: 800;
   src: url('../assets/fonts/figtree-v9-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+html{
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+}
+
+/* Main */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Footer */
+
+.sitefooter p{
+  font-size: 0.875rem;
+}

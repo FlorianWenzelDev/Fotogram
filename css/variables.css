@@ -1,0 +1,9 @@
+:root{
+    --primary-color-header-footer: rgba(9, 33, 42, 1);
+    --primary-content-color: rgba(6, 23, 30, 1);
+    --secondary-content-color: rgba(18, 70, 88, 1);
+    --tertiary-content-color:  rgba(107, 193, 225, 1);
+    --primary-font-color: rgba(255, 255, 255, 1);
+    --secondary-font-color: rgba(153, 172, 179, 1);
+    --controls-color: rgba(253, 91, 79, 1);
+}
