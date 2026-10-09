@@ -12,23 +12,20 @@
 
 </head>
 
-<body>
+<body onload="loadAlbum()">
     <header class="siteheader">
         <img class="company-logo" src="./assets/icons/Company_logo.svg" alt="Companylogo">
     </header>
     <main>
         <h1>Your personal photo album</h1>
-        <div class="album-wrapper">
-            <img src="./assets/img/alaska-810433_1280.jpg" alt="Alaska">
-            <img src="./assets/img/alaska-810433_1280.jpg" alt="Alaska">
-            <img src="./assets/img/alaska-810433_1280.jpg" alt="Alaska">
-            <img src="./assets/img/alaska-810433_1280.jpg" alt="Alaska">
-        </div>
+        <section id="album-wrapper" class="album-wrapper">
+        </section>
     </main>
     <footer class="sitefooter">
         <img src="./assets/icons/DA_logo.svg" alt="DA logo">
         <p>© 2023 Developer Akademie GmbH</p>
     </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
