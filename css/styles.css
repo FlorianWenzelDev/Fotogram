@@ -1,7 +1,8 @@
+/* General */
+
 * {
     box-sizing: border-box;
     margin: 0px;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -56,15 +57,114 @@ h1 {
     height: 150px;
     object-fit: cover;
     transform: scale(1);
-    
     transition: all 250ms;
 }
 
 .album-picture:hover {
     border: 2px solid var(--tertiary-content-color);
     transform: scale(1.1);
-
     transition: all 250ms;
+}
+
+/* Dialog */
+
+.picture-viewer {
+    gap: 48px;
+    align-items: center;
+    margin: auto;
+    padding: 32px 16px;
+    border: none;
+    width: 100vw;
+    max-width: min(800px, 100vw); /* elsewehre the backdrop would be visible on the right site */
+    height: 100dvh;
+    max-height: min(650px, 100dvh);
+    color: var(--primary-font-color);
+    background-color: var(--primary-dialog-color);
+}
+
+.picture-viewer:open {
+    display: flex;
+    flex-direction: column;
+}
+
+.picture-viewer::backdrop {
+    background-color: rgba(9, 33, 42, 0.6);
+}
+
+.styling-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.styling-container h2{
+    width: 100%;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-dialog-color);
+    transition: all 250ms ease-in-out;
+}
+
+.close-button:hover, .close-button:focus {
+    background-color: var(--secondary-content-color);
+    transition: all 250ms ease-in-out;
+}
+
+.close-button:active {
+    background-color: var(--tertiary-content-color);
+}
+
+.close-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.picture-viewer img{
+    max-width: 100%;
+    max-height: min(450px, 60%);
+    object-fit: cover;
+}
+
+.picture-viewer-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+}
+
+.nav-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: color-mix(
+        in srgb,
+        var(--primary-controls-color) 10%,
+        transparent
+    );
+    transition: all 250ms ease-in-out;
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-controls-color) 25%,
+        transparent
+    );
+    transition: all 250ms ease-in-out;
 }
 
 /* Footer */
