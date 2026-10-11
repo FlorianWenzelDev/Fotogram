@@ -13,6 +13,20 @@ let album = [
   "winter-1675197_1280.jpg",
 ];
 
+let descriptions = ["snowy mountains in alska",
+    "city drawn in anime style",
+    "atmospheric thunderstorm cells",
+    "blue tilt sitting an a branch",
+    "topview of an hurricane eye",
+    "picture of a blue lake",
+    "moorente in a sea",
+    "man standing on a rock in the middle of a sea",
+    "snow bunting sitting on a rock",
+    "two snowleopard cubs sitting on a rock",
+    "view of a mountains summit",
+    "one tree covered in snow"
+]
+
 function loadAlbum() {
   let targetContainer = document.getElementById("albumWrapper");
   for (let index = 0; index < album.length; index++) {
@@ -23,7 +37,15 @@ function loadAlbum() {
 function openDialog(event) {
   const dialog = document.getElementById("pictureViewer");
   dialog.showModal();
-  event.stopPropagation();
+}
+
+function openDialogWithEnter(event, filename) {
+    if (event.key === 'Enter'){
+        openDialog(event);
+        loadDialogElementsOnOpening(filename);
+        event.stopPropagation();
+    }
+    
 }
 
 function loadDialogElementsOnOpening(filename) {
@@ -79,5 +101,5 @@ function updateDialogElements(event, direction) {
 // Template functions
 
 function getAlbumPictureTemplate(index) {
-  return `<img aria-haspopup="dialog" aria-controls="picture-viewer" onclick="openDialog(event), loadDialogElementsOnOpening('${album[index]}')" class='album-picture' src="./assets/img/${album[index]}" alt="${album[index]}"></img>`;
+  return `<img aria-haspopup="dialog" aria-controls="picture-viewer" aria-label="${descriptions[index]}" onclick="openDialog(event), loadDialogElementsOnOpening('${album[index]}')" onkeydown="openDialogWithEnter(event, '${album[index]}')" tabindex="1" class='album-picture' src="./assets/img/${album[index]}" alt="${descriptions[index]}"></img>`;
 }
