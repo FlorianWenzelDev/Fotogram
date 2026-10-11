@@ -91,16 +91,17 @@ h1 {
     background-color: rgba(9, 33, 42, 0.6);
 }
 
-.styling-container {
+.dialog-header-styling-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
     width: 100%;
+    min-height: 32px;
     text-align: center;
 }
 
-.styling-container h2 {
+.dialog-header-styling-container h2 {
     width: 100%;
 }
 
@@ -171,8 +172,7 @@ h1 {
     transition: all 250ms ease-in-out;
 }
 
-.nav-button:hover,
-.nav-button:focus {
+.nav-button:hover {
     background-color: color-mix(
         in srgb,
         var(--primary-controls-color) 25%,
@@ -203,15 +203,36 @@ h1 {
     color: var(--secondary-font-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
+    .siteheader {
+        justify-content: flex-start;
+        padding-left: 48px;
+    }
 
+    main {
+        padding: 40px 48px;
+    }
+
+    .picture-viewer {
+        padding: 32px 48px;
+        border-radius: 32px;
+    }
+
+    .dialog-header-styling-container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: unset;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     .siteheader {
         padding-left: 96px;
         justify-content: flex-start;
     }
 
-    .picture-viewer{
-        border-radius: 32px;
+    main {
+        padding: 40px 96px;
     }
 }
 
