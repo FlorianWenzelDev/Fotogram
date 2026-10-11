@@ -103,6 +103,9 @@ h1 {
 
 .dialog-header-styling-container h2 {
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .close-button {
