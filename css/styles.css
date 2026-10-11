@@ -9,6 +9,10 @@ body {
     background-color: var(--primary-content-color);
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 /* Siteheader */
 
 .siteheader {
@@ -88,12 +92,12 @@ h1 {
 }
 
 .picture-viewer::backdrop {
-    background-color: rgba(9, 33, 42, 0.6);
+    background-color: rgba(1, 13, 31, 0.6);
 }
 
 .dialog-header-styling-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-end;
     gap: 8px;
     width: 100%;
@@ -221,7 +225,7 @@ h1 {
     }
 
     .dialog-header-styling-container {
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
         gap: unset;
     }
