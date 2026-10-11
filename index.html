@@ -20,14 +20,14 @@
         <h1>Your personal photo album</h1>
         <section id="albumWrapper" class="album-wrapper">
         </section>
-        <dialog aria-label="Picture viewer" aria-hidden="true"  closedby="any" id="pictureViewer" class="picture-viewer">
+        <dialog aria-label="Picture viewer" closedby="any" id="pictureViewer" class="picture-viewer">
             <div class="dialog-header-styling-container">
                 <button aria-label="close dialog" class="close-button" onclick="closeDialog()"><img src="./assets/icons/close.svg"
                         alt="Closebutton"></button>
                 <h2 id="pictureTitle">Placeholder</h2>
             </div>
             <div class="img-wrapper">
-                <img aria-labelledby="picture-title" id="singlePictureView" src="./assets/img/lake-2896379_1280.jpg " alt="Placeholder">
+                <img aria-labelledby="pictureTitle" id="singlePictureView" src="./assets/img/lake-2896379_1280.jpg " alt="Placeholder">
             </div>
             <nav class="picture-viewer-navigation">
                 <button aria-label="show next picture" onclick="updateDialogElements(event, -1)" class="nav-button"><img src="./assets/icons/Arrow_left.svg"
