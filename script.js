@@ -41,8 +41,8 @@ function openDialog(event) {
 
 function openDialogWithEnter(event, filename) {
     if (event.key === 'Enter'){
-        openDialog(event);
         loadDialogElementsOnOpening(filename);
+        openDialog(event);
         event.stopPropagation();
     }
     
